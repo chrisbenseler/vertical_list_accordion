@@ -10,11 +10,11 @@ var VerticalListAccordion = function(opts) {
 		el: null,
 		items: 3,
 		li_class: "vla_list-item"
-	}
+	};
 
 	var inner_li = function(data_item) {
 		return data_item.name;
-	}
+	};
 
 	for(var key in opts) {
 		if(key=="inner_data") {
@@ -30,7 +30,7 @@ var VerticalListAccordion = function(opts) {
 		var str = "";
 		for(var i=0; i<(data.length > options.items ? options.items : data.length); i++) {
 			var li = el.find("li[data-id='" + data[i].id + "']");
-			if(li.length==0)
+			if(li.length===0)
 				str += "<li data-id=\"" + data[i].id + "\" class=\"vla_new-item\" style=\"display:none;\">" + inner_li(data[i]) + "</li>";
 		}
 		$(el).prepend(str);
@@ -48,12 +48,10 @@ var VerticalListAccordion = function(opts) {
 				.removeClass("vla_new-item")
 				.addClass(options.li_class);
 		});
-	}
-
-	
+	};
 
 	//reveal method(s)
 	this.update = show_items;
 
 	return this;
-}
+};
