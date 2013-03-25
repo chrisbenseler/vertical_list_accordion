@@ -55,8 +55,12 @@ var va = new VerticalListAccordion({
 //this will output the item.name surrounded by the name attribute
 </pre>
 
-License
-=======
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at http://mozilla.org/MPL/2.0/.
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2013 Christian Benseler  
+Licensed under the MIT license.
