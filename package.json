@@ -1,0 +1,39 @@
+{
+  "name": "verticallistaccordion",
+  "description": "Vertical List Accordion",
+  "version": "0.1.0",
+  "homepage": "https://github.com/chrisbenseler/vertical_list_accordion",
+  "author": {
+    "name": "Christian Benseler",
+    "email": "cbenseler@gmail.com",
+    "url": "http://www.chrisb.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisbenseler/vertical_list_accordion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisbenseler/vertical_list_accordion/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/chrisbenseler/vertical_list_accordion/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/vertical_list_accordion",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0"
+  },
+  "keywords": []
+}
