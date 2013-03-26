@@ -31,7 +31,7 @@ var VerticalListAccordion = function(opts) {
 
 	var el = options.element;
 
-	var show_items = function(data) {
+	this.update = function(data) {
 		var str = "";
 		for(var i=0; i<(data.length > options.items ? options.items : data.length); i++) {
 			var li = el.find("li[data-id='" + data[i].id + "']");
@@ -40,7 +40,6 @@ var VerticalListAccordion = function(opts) {
 			}
 		}
 		$(el).prepend(str);
-
 		el.find("li.vla_new-item").each(function() {
 			var lis = el.find("li." + options.li_class);
 			if(lis.length>(options.items - 1)) {
@@ -55,9 +54,6 @@ var VerticalListAccordion = function(opts) {
 				.addClass(options.li_class);
 		});
 	};
-
-	//reveal method(s)
-	this.update = show_items;
 
 	return this;
 };
