@@ -39,7 +39,8 @@ var VerticalListAccordion = function(opts) {
 				str += "<li data-id=\"" + data[i].id + "\" class=\"vla_new-item\" style=\"display:none;\">" + inner_li(data[i]) + "</li>";
 			}
 		}
-		$(el).prepend(str);
+		$(el)
+		.prepend(str)
 		el.find("li.vla_new-item").each(function() {
 			var lis = el.find("li." + options.li_class);
 			if(lis.length>(options.items - 1)) {
