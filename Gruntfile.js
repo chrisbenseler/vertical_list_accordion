@@ -5,12 +5,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    nodeunit: {
-      files: ['test/**/*_test.js'],
+    qunit: {
+      files: ['test/index.html'],
     },
     jshint: {
       options: {
         jshintrc: '.jshintrc'
+
       },
       gruntfile: {
         src: 'Gruntfile.js'
@@ -18,8 +19,9 @@ module.exports = function(grunt) {
       src: {
         src: ['src/**/*.js']
       },
-      test: {
+      tests: {
         src: ['test/**/*.js']
+        
       },
     },
     uglify: {
@@ -34,9 +36,17 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  
 
   // Default task.
-  //grunt.registerTask('default', ['jshint', 'nodeunit']);
   grunt.registerTask('default', ['jshint', 'uglify']);
+
+
+  //Travis CI task
+  grunt.registerTask('test', ['qunit']);
+
+
+
 
 };

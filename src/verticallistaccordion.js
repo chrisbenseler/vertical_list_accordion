@@ -41,7 +41,7 @@ var VerticalListAccordion = function(opts) {
 		}
 		$(el)
 		.prepend(str)
-		el.find("li.vla_new-item").each(function() {
+		.find("li.vla_new-item").each(function() {
 			var lis = el.find("li." + options.li_class);
 			if(lis.length>(options.items - 1)) {
 				$(lis[options.items - 1]).slideUp(function() {
