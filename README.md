@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/[chrisbenseler]/[vertical_list_accordion].png)](https://travis-ci.org/[chrisbenseler]/[vertical_list_accordion])
+
 Vertical List Accordion
 =======================
 Javascript component to create an accordion effect in a list when data is updated. Depens on jQuery. New elements are shown on the top of the list with slideUp() effect and olds will be removed with slideDown() effect;
