@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/[chrisbenseler]/[vertical_list_accordion].png)](https://travis-ci.org/[chrisbenseler]/[vertical_list_accordion])
+[![Build Status](https://travis-ci.org/chrisbenseler/vertical_list_accordion.png)](https://travis-ci.org/chrisbenseler/vertical_list_accordion)
 
 Vertical List Accordion
 =======================
