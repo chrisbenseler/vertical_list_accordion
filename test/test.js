@@ -1,20 +1,22 @@
+/*global $:false, VerticalListAccordion:false */
 "use strict";
 
 test("create element", function() {
 	try {
 		var va = new VerticalListAccordion();
+		va = new VerticalListAccordion({
+			element: $("ul#mylist"),
+			items: 4,
+			inner_data: function(item) {
+				return "<span>" + item.name + "</span>";
+			}
+		});
+		ok(va!==null);
 	} catch (e) {
-		ok("Error: options missing" == e);	
+		ok("Error: options missing" === e);	
 	}
 
-	var va = new VerticalListAccordion({
-		element: $("ul#mylist"),
-		items: 4,
-		inner_data: function(item) {
-			return "<span>" + item.name + "</span>";
-		}
-	});
-	ok(va!==null);
+	
 });
 
 asyncTest("insertion", function() {
@@ -44,14 +46,14 @@ asyncTest("insertion", function() {
 
 	va.update(data1);
 
-	ok($("ul#mylist li").length == 3);
+	ok($("ul#mylist li").length === 3);
 
-	ok($("ul#mylist li:first-child").html() == "<span>nome 3</span>");	
+	ok($("ul#mylist li:first-child").html() === "<span>nome 3</span>");	
 
 	va.update(data2);
 
 	setTimeout(function () {
-		ok($("ul#mylist li").length == 4, "Size: " + $("ul#mylist li").length);
+		ok($("ul#mylist li").length === 4, "Size: " + $("ul#mylist li").length);
 		start();
 	}, 1000);
 
